@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New York</title>
+
+  </head>
+  <body>
+      <div class="container">
+
+        <div class="current_info">
+            <h1>New York, NY</h1>
+            <span>Tuesday, April 15th</span>
+            <span>Overcast</span>
+        </div>
+
+          <div class="current_weather">
+            <div class="current_weather_icon"><img src="/img/cloudy.png" alt="cloudy"></div>
+            <div class="current_weather_degree">
+              <span>58<span>&#8457;</span></span>
+            </div>
+            <div class="weather_info">
+                <span>Precipitation: 100%</span>
+                <span>Humidity: 97%</span>
+                <span>Wind: 4 mph SW</span>
+                <span>Pollen Count: 36</span>
+            </div>
+          </div>
+
+          <div class="weather_week">
+
+            <div class="weather_day">
+              <div class="day"><span><b>Today</b></span></div>
+              <div><img src="/img/thunderstorms.png" alt="thunderstorms"></div>
+              <div class="degree_day"><span><b>68&deg;</b></span><span>36&deg;</span></div>
+              <div class="pollen"><span>Pollen</span><span>36</span></div>
+            </div>
+
+            <div class="weather_day">
+              <div class="day"><span><b>Wednesday</b></span></div>
+              <div><img src="/img/sunny.png" alt="sunny"></div>
+              <div class="degree_day"><span><b>50&deg;</b></span><span>39&deg;</span></div>
+              <div class="pollen"><span>Pollen</span><span>36</span></div>
+            </div>
+
+            <div class="weather_day">
+              <div class="day"><span><b>Thursday</b></span></div>
+              <div><img src="/img/sunny.png" alt="sunny"></div>
+              <div class="degree_day"><span><b>55&deg;</b></span><span>39&deg;</span></div>
+              <div class="pollen"><span>Pollen</span><span>36</span></div>
+            </div>
+
+            <div class="weather_day">
+              <div class="day"><span><b>Friday</b></span></div>
+              <div><img src="/img/partly_cloudy.png" alt="partly_cloudy"></div>
+              <div class="degree_day"><span><b>68&deg;</b></span><span>36&deg;</span></div>
+              <div class="pollen"><span>Pollen</span><span>36</span></div>
+            </div>
+
+            <div class="weather_day">
+              <div class="day"><span><b>Saturday</b></span></div>
+              <div><img src="/img/rain_s_cloudy.png" alt="rain_s_cloudy"></div>
+              <div class="degree_day"><span><b>64&deg;</b></span><span>46&deg;</span></div>
+              <div class="pollen"><span>Pollen</span><span>36</span></div>
+            </div>
+
+            <div class="weather_day">
+              <div class="day"><span><b>Sunday</b></span></div>
+              <div><img src="/img/rain_s_cloudy.png" alt="rain_s_cloudy"></div>
+              <div class="degree_day"><span><b>64&deg;</b></span><span>50&deg;</span></div>
+              <div class="pollen"><span>Pollen</span><span>36</span></div>
+            </div>
+
+            <div class="weather_day">
+              <div class="day"><span><b>Monday</b></span></div>
+              <div><img src="/img/partly_cloudy.png" alt="partly_cloudy"></div>
+              <div class="degree_day"><span><b>68&deg;</b></span><span>36&deg;</span></div>
+              <div class="pollen"><span>Pollen</span><span>36</span></div>
+            </div>
+
+          </div>
+
+      </div>
+
+  </body>
+</html>
+
+<style>
+
+  @media (min-width: 0px){
+
+    body {
+      font-family: Roboto, Arial;
+      font-size: 0.8em;
+      /*color: #666;*/
+      overflow-y: hidden;
+    }
+    .current_weather_degree > span {
+      font-size: 50px;
+    }
+    .current_weather_degree > span > span{
+      font-size: 20px;
+      vertical-align: super;
+    }
+    .current_info {
+      display: grid;
+    }
+    .current_info > h1{
+      margin: 0;
+    }
+.weather_day {
+  margin-top: 5px;
+  display: flex;
+  border-top: 1px solid #aaa;
+}
+.weather_day > div {
+  width: 25%;
+  margin: auto;
+}
+
+.day {
+  padding-left: 10px;
+}
+
+.degree_day, .pollen {
+  display: grid;
+  text-align: center;
+}
+  .container {
+    width: 320px;
+    border: 1px solid #aaa;
+  }
+
+  .current_weather{
+    display: flex;
+    margin-bottom: 2%;
+  }
+  .weather_info {
+    display: grid;
+    margin: auto;
+  }
+}
+  @media (min-width: 450px){
+    .container {
+      width: 450px;
+    }
+    .degree_day, .pollen {
+      display: flex;
+      text-align: center;
+
+    }
+    .degree_day {
+      justify-content: space-around;
+
+    }
+
+  }
+
+  @media (min-width: 800px){
+    .container {
+      width: 800px;
+    }
+
+    .weather_week{
+      display: flex;
+    }
+
+    .weather_day {
+      display: grid;
+      width: calc(100%/7);
+      margin-top: 0;
+      border-top: 0;
+
+    }
+
+    .day {
+      padding-left: 0;
+    }
+
+    .weather_day > div {
+      width: auto;
+    }
+
+
+  }
+
+
+</style>
